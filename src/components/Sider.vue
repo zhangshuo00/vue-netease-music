@@ -19,8 +19,7 @@ export default {
 
 <style>
 #siderNav{
-	width:200px;
-	height:700px;
+	width:14%;
 	float: left;
 	background-color: #e6e6e6;
 }
