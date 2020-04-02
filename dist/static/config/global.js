@@ -1,2 +1,2 @@
-const host = "http://localhost:3000"
+const host = "www.zhuoran.fun:3000"
 export default{host}

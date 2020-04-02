@@ -20,7 +20,6 @@ export default {
 <style>
 #siderNav{
 	width:14%;
-	float: left;
 	background-color: #e6e6e6;
 }
 img{

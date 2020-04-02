@@ -5,14 +5,13 @@
       <p style="width:100%">推荐歌单</p>
       <hr>
       <div class="find-song-list">
-        <template v-for="(item,idx) in info">
-          <div :key="idx" class="song-list-box" v-if="info">
+        <div v-for="(item,idx) in info" :key="idx" class="song-list-box">
+          <router-link :to="'/songlist/'+item.id">
             <span class="song-list-playC">{{parseInt(item.playCount/10000)+'万'}}</span>
             <img style="width:200px" :src='item.picUrl' alt="">
             <span class="song-list-title">{{item.name}}</span>
-          </div>
-        </template>
-        
+          </router-link>
+        </div>
       </div>
     </div>
   </div>
@@ -31,14 +30,14 @@ export default {
   },
   methods:{
     getData:function(){
-      this.$axios.get(this.Global.host+'/personalized',{
+      this.axios.get('/personalized',{
         params:{
           limit:10
         }
       })
       .then(res=>{
         this.info = res.data.result
-        console.log(this.info)
+        // console.log(this.info)
       })
     }
   }

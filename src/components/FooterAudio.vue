@@ -1,11 +1,11 @@
 <template>
-  <footer id="footerAudio">
+  <div id="footerAudio">
         <!-- <audio ref="audio"
             controls="controls"
             src="http://m7.music.126.net/20200329222815/911b546673f84e92e71fc70e1487b48f/ymusic/0fd6/4f65/43ed/a8772889f38dfcb91c04da915b301617.mp3"
         ></audio> -->
         <aplayer :audio="audio" :lrcType="3" @pause="onPause"/>
-  </footer>
+  </div>
 </template>
 
 <script>
@@ -30,7 +30,11 @@ export default {
 
 <style>
 #footerAudio{
-    
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+    z-index: 1010;
 }
 .aplayer .aplayer-lrc{
     height: 20px;

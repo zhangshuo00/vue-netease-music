@@ -5,6 +5,7 @@ import FM from '@/components/FM.vue'
 import Viedo from '@/components/Viedo.vue'
 import Friends from '@/components/Friends.vue'
 import Setting from '@/components/Setting.vue'
+import SongListDetail from '@/components/SongListDetail.vue'
 
 Vue.use(Router)
 
@@ -14,7 +15,7 @@ export default new Router({
     {path:'/fm',name:'FM',component:FM},
     {path: '/viedo',name: 'Viedo',component:Viedo},
     {path: '/friends',name: 'Friends',component:Friends},
-    {path: '/setting',name: 'Setting',component:Setting}
-  ],
-  mode:'history'
+    {path: '/setting',name: 'Setting',component:Setting},
+    {path: '/songlist/:id',name: 'Songlist',component:SongListDetail}
+  ]
 })
